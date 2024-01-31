@@ -1,0 +1,273 @@
+
+body{
+   margin: 0;
+   font-family: 'Black Ops One', system-ui;
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    position: relative;
+    min-height: 100vh;
+
+  
+
+}
+
+
+/* Optionally, you can use scroll-snap-align to specify snap points */
+
+
+.fa-linkedin{
+    position: fixed;
+    top: 7px;
+    left: 20em;
+    color: bisque;
+    font-size: 2.2em;
+    cursor: pointer;
+    z-index: 5000;
+  
+}
+.fa-github{
+    position: fixed;
+   top:7px;
+  left: 22em;
+    color:bisque;
+  cursor: pointer;
+    font-size: 2.2em;
+    border-radius: 100%;
+    z-index: 500;
+}
+
+main .fa-brands:hover{
+
+
+  color: #00A0DC;
+    
+}
+
+main .fa-github:hover{
+
+
+  color: #333;
+    
+}
+header{
+    
+z-index: 100;
+    top: 0;
+    
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20em;
+  background-color: rgb(0, 0, 0);
+width: 100%;
+color: white;
+
+   
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    cursor: pointer;
+}
+main{
+    align-items: start;
+   overflow: hidden;
+   position: relative;
+   
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( #0f0c29, #302b63, #24243e);
+    display: flex;
+    
+    justify-content:center;
+    align-items: center;
+   
+   
+    
+   
+  
+}
+
+main::before{
+    content: '';
+    width: 120%;
+    height: 200px;
+    position: absolute;
+    opacity: 0.09;
+    transform: rotate(30deg);
+    pointer-events: none;
+    user-select: none;
+    background-color: rgb(212, 201, 201);
+}
+
+main::after{
+    content: '';
+    width: 120%;
+    height: 200px;
+    position: absolute;
+    opacity: 0.09;
+    transform: rotate(-30deg);
+    background-color: rgb(212, 201, 201);
+}
+
+main h1 {
+  
+    color: #0095ff;
+    font-size: 2em;
+    font-weight: bold;
+  
+   
+    
+  }
+main .title{
+    z-index: 20;
+    margin-right: 5em;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+  
+
+
+}
+
+main .title h6{
+
+    width: 80%;
+    text-align: center;
+    font-weight: normal;
+ 
+   
+}
+
+.pic1{
+   
+   margin-right: 3em;
+  
+   filter: drop-shadow( -20px -20px 15px);
+   box-shadow: -20px -20px 10px, 20px 20px 10px;
+   border-radius: 20%;
+
+    animation: image_up_down 2s linear infinite;
+   
+   }
+
+   main h1 {
+  
+    
+    z-index: 20;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+   text-wrap: nowrap;
+    animation: 
+      typing 3.5s  steps(700, end);
+     
+   
+    
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0}
+  
+    to { width: 610px}
+  }
+  
+  @keyframes letterspace {
+    0%,100%{
+letter-spacing: 0px;
+    }
+    50%{
+      letter-spacing: 2px;
+    }
+  }
+  
+
+
+@keyframes image_up_down {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+       
+        transform: translate(0,0);
+    }
+    
+}
+
+
+
+
+
+
+
+.talk {
+    z-index: 20;
+    transition: 0.5s;
+    background-color: #3DD1E7;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .talk:focus {
+    outline: 0;
+  }
+  
+  .talk:after {
+    content: '';
+    position: absolute;
+    border: 2px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+  }
+  
+  .talk:hover:after {
+    bottom: 2px;
+    left: 2px;
+  }
+  
+  .talk:active{
+    transform: scale(0.95);
+    transition: 0.5s;
+  }
+  
+  @media (min-width: 768px) {
+    .talk {
+      padding: .75rem 3rem;
+      font-size: 1.25rem;
+    }
+  }
+
+
