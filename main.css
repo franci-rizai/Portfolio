@@ -52,7 +52,7 @@ main{
   position: relative;
   
    width: 90%;
-  min-height: 95svh;
+  min-height: 90svh;
    background-color: #1d1d1d;
    display: flex;
   
@@ -64,14 +64,7 @@ main{
   
  
 }
-@media only screen and (max-width: 1350px) {
- main{
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   gap: 4em;
- }
-}
+
 
 main::before{
 
@@ -134,7 +127,7 @@ transition: 0.3s;
   content:'Details';
   position: absolute;
   font-size: 0.5em;
-  background-color: rgb(37, 36, 36);
+  background-color: transparent;
   padding: 5px;
   font-weight: normal;
   border-radius: 20%;
@@ -248,6 +241,7 @@ gap: 1em;
   letter-spacing: 3px;
   text-wrap: nowrap;
   animation: typing 1s linear ;
+  
 }
 
 main::after{
@@ -272,7 +266,10 @@ main::after{
  @keyframes typing {
    from { width: 0}
  
-   to { width: 610px}
+   to {
+    
+    width: 100%;
+  }
  }
  
 
@@ -292,6 +289,44 @@ main::after{
    
 }
 
+
+
+@media screen and (max-width: 950px) {
+
+  .main_det{
+    flex-direction: column;
+    gap: 0;
+    
+  }
+  .title h1{
+    overflow: visible;
+    font-size: 2em;
+    white-space: wrap;
+    
+  }
+  main{
+
+  
+   
+  
+  
+   min-height: 120svh;
+  }
+  main::before{
+    width: 0;
+    height: 0;
+  } 
+  main::after{
+    width: 0;
+    height: 0;
+  } 
+  .top_cont{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
 
 
 
