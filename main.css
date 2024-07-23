@@ -156,6 +156,7 @@ header div:nth-child(1){
   padding-bottom: 10px;
 }
 
+
 .top_cont{
   display: flex;
   align-items: start;
@@ -295,7 +296,7 @@ main::after{
 
   .main_det{
     flex-direction: column;
-    gap: 0;
+    gap:0;
     
   }
   .title h1{
